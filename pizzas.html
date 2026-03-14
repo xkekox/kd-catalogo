@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caixas de Pizza - K&D Embalagens</title>
+    <meta name="kd-whatsapp-number" content="5592992717496">
+    <title>Caixas de Pizza - K&amp;D Embalagens</title>
+    <meta name="description" content="Caixas de pizza personalizadas da K&D Embalagens com producao local em Manaus e condicoes para pedidos de 250 a 1.000 unidades.">
+    <script src="./catalog-utils.js" defer></script>
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
@@ -92,7 +95,6 @@
             font-size: 16px;
         }
     </style>
-    <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
@@ -110,28 +112,31 @@
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=1353721879855670&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
     <script>
         function zap(prod) {
-            fbq('track', 'Lead', { content_name: prod, content_category: 'Catalogo Pizzas' });
-            const msg = `Olá Jeferson! Vi o catálogo e quero o orçamento de Milheiro para ${prod}.`;
-            setTimeout(() => { window.location.href = `https://wa.me/5592XXXXXXXXX?text=${encodeURIComponent(msg)}`; }, 100);
+            const msg = `Ola Jeferson! Vi o catalogo e quero o orcamento de milheiro para ${prod}.`;
+            window.KDCatalog.openWhatsApp(msg, {
+                eventName: 'Lead',
+                eventData: { content_name: prod, content_category: 'Catalogo Pizzas' }
+            });
         }
     </script>
 </head>
 
 <body>
-    <div class="header">🍕 PIZZAS - K&D</div>
+    <div class="header">PIZZAS - K&amp;D</div>
     <div class="container">
         <div class="info-box">
-            💎 <b>CONDIÇÕES ESPECIAIS (JEFERSON):</b><br>
-            ✅ <b>A PARTIR DE 250 UNID:</b> LOGO + FRETE GRÁTIS (Manaus)<br>
-            ❌ <b>ABAIXO DE 250 UNID:</b> TAXA DE TELA R$ 90 + FRETE<br>
-            ⏱️ <b>PRAZO DE PRODUÇÃO:</b> 7 DIAS ÚTEIS
+            <strong>CONDICOES ESPECIAIS (JEFERSON):</strong><br>
+            <strong>A PARTIR DE 250 UNID:</strong> logo + frete gratis (Manaus)<br>
+            <strong>ABAIXO DE 250 UNID:</strong> taxa de tela R$ 90 + frete<br>
+            <strong>PRAZO DE PRODUCAO:</strong> 7 dias uteis<br>
+            <strong>DIFERENCIAL K&amp;D:</strong> foco em pizzarias que precisam de prazo claro e fornecedor local.
         </div>
 
         <div class="card">
             <h3>Caixas de Pizza Personalizadas</h3>
+            <p style="color:#d7d7d7;font-size:13px;line-height:1.6;margin:0 0 12px;">A proposta aqui e simples: reduzir dependencia de carga de fora e manter a sua marca saindo forte em cada entrega.</p>
             <table>
                 <tr>
                     <th>Tamanho</th>
@@ -169,7 +174,7 @@
                     <td class="promo">R$ 2,20</td>
                 </tr>
             </table>
-            <button class="btn-gold" onclick="zap('Pizzas')">💬 TIRAR DÚVIDAS NO WHATSAPP</button>
+            <button class="btn-gold" onclick="zap('Pizzas')">TIRAR DUVIDAS NO WHATSAPP</button>
         </div>
     </div>
 </body>
