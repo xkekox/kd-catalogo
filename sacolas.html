@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sacolas Kraft - K&D Embalagens</title>
+    <meta name="kd-whatsapp-number" content="5592992717496">
+    <title>Sacolas Kraft - K&amp;D Embalagens</title>
+    <meta name="description" content="Sacolas kraft personalizadas da K&D Embalagens com producao local em Manaus e atendimento direto para pedidos em escala.">
+    <script src="./catalog-utils.js" defer></script>
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
@@ -41,14 +44,6 @@
             margin: 20px 0;
             font-size: 14px;
             line-height: 1.8;
-        }
-
-        .category {
-            color: #d4af37;
-            font-size: 22px;
-            margin: 35px 0 10px;
-            text-transform: uppercase;
-            border-bottom: 1px solid #333;
         }
 
         .card {
@@ -111,7 +106,6 @@
             display: inline-block;
         }
     </style>
-    <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
@@ -129,35 +123,38 @@
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=1353721879855670&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
     <script>
         function zap(prod) {
-            fbq('track', 'Lead', { content_name: prod, content_category: 'Catalogo Sacolas' });
-            const msg = `Olá Jeferson! Vi o catálogo e quero o orçamento de Milheiro para ${prod}.`;
-            setTimeout(() => { window.location.href = `https://wa.me/5592XXXXXXXXX?text=${encodeURIComponent(msg)}`; }, 100);
+            const msg = `Ola Jeferson! Vi o catalogo e quero o orcamento de milheiro para ${prod}.`;
+            window.KDCatalog.openWhatsApp(msg, {
+                eventName: 'Lead',
+                eventData: { content_name: prod, content_category: 'Catalogo Sacolas' }
+            });
         }
     </script>
 </head>
 
 <body>
-    <div class="header">🛍️ SACOLAS KRAFT - K&D</div>
+    <div class="header">SACOLAS KRAFT - K&amp;D</div>
     <div class="container">
         <div class="info-box">
-            💎 <b>CONDIÇÕES ESPECIAIS (JEFERSON):</b><br>
-            ✅ <b>A PARTIR DE 250 UNID:</b> LOGO + FRETE GRÁTIS (Manaus)<br>
-            ❌ <b>ABAIXO DE 250 UNID:</b> TAXA DE TELA R$ 90 + FRETE<br>
-            ⏱️ <b>PRAZO DE PRODUÇÃO:</b> 7 DIAS ÚTEIS
+            <strong>CONDICOES ESPECIAIS (JEFERSON):</strong><br>
+            <strong>A PARTIR DE 250 UNID:</strong> logo + frete gratis (Manaus)<br>
+            <strong>ABAIXO DE 250 UNID:</strong> taxa de tela R$ 90 + frete<br>
+            <strong>PRAZO DE PRODUCAO:</strong> 7 dias uteis<br>
+            <strong>DIFERENCIAL K&amp;D:</strong> sacola colorida, fabrica local e atendimento direto com o Jeferson.
         </div>
 
         <div class="card">
-            <span class="badge">ÚNICO QUE É COLORIDO</span>
+            <span class="badge">UNICO MODELO COLORIDO</span>
             <h3>Sacolas Kraft Personalizadas</h3>
-            <p style="color:#aaa;font-size:12px;margin:4px 0 12px;">Fundo reforçado | Personalizável com sua logo</p>
+            <p style="color:#aaa;font-size:12px;margin:4px 0 12px;">Fundo reforcado | Personalizavel com sua logo</p>
+            <p style="color:#d7d7d7;font-size:13px;line-height:1.6;margin:0 0 12px;">Ideal para varejo, delivery premium e marcas que querem fugir da sacola comum sem depender de fornecedor de fora.</p>
             <table>
                 <tr>
                     <th>Modelo</th>
                     <th>Medidas</th>
-                    <th class="promo">Preço/un (milheiro)</th>
+                    <th class="promo">Preco/un (milheiro)</th>
                 </tr>
                 <tr>
                     <td><b>No1</b></td>
@@ -180,9 +177,8 @@
                     <td class="promo">R$ 1,50</td>
                 </tr>
             </table>
-            <p style="color:#aaa;font-size:11px;margin-top:8px;">* Preços para pedidos a partir de 250 unidades com logo
-                inclusa</p>
-            <button class="btn-gold" onclick="zap('Sacolas Kraft')">💬 TIRAR DÚVIDAS NO WHATSAPP</button>
+            <p style="color:#aaa;font-size:11px;margin-top:8px;">* Precos para pedidos a partir de 250 unidades com logo inclusa</p>
+            <button class="btn-gold" onclick="zap('Sacolas Kraft')">TIRAR DUVIDAS NO WHATSAPP</button>
         </div>
     </div>
 </body>
